@@ -7,5 +7,7 @@
 
 
 <!--<can-import from="testapp/components/welcome/">-->
-    <!--<welcome></welcome>-->
+    <!--{{#if isResolved}}-->
+    <!--<wel-come></wel-come>-->
+    <!--{{/if}}-->
 <!--</can-import>-->

@@ -30,7 +30,7 @@ app.on('ready', function () {
 	});
 
 	trayApp = new Tray(trayIconPath);
-	trayApp.setToolTip('BoardZ2');
+	trayApp.setToolTip('DoneJS');
 
 	globalShortcut.register('CmdOrCtrl+Shift+d', function () {
 		mainWindow.webContents.toggleDevTools();

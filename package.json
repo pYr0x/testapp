@@ -7,18 +7,20 @@
     "type": "",
     "url": ""
   },
-  "scripts": {},
+  "scripts": {
+    "build-web": "gulp build-web",
+    "build-windows": "gulp build-electron-windows"
+  },
   "author": "",
   "bugs": {
     "url": ""
   },
   "homepage": "",
   "devDependencies": {
+    "del": "^2.2.0",
     "gulp-atom-electron": "^1.4.0",
     "gulp-awesome-electron": "git+https://github.com/ThorstenHans/gulp-awesome-electron.git",
     "gulp-symdest": "^1.0.0",
-    "gulp-clean": "^0.3.2",
-    "merge2": "^0.3.6",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.4"
   },
@@ -29,9 +31,17 @@
     "steal-tools": "git+https://github.com/stealjs/steal-tools.git#minor"
   },
   "system": {
-    "main": "index",
+    "main": "main",
     "directories": {
       "lib": "src"
+    },
+    "envs": {
+      "build": {
+        "map": {}
+      },
+      "window-production": {
+        "map": {}
+      }
     },
     "npmIgnore": [
       "devDependencies"

@@ -15,5 +15,12 @@ export const ViewModel = Map.extend({
 export default Component.extend({
 	tag: 'welcome',
 	viewModel: ViewModel,
+	events: {
+		'click': function(){
+			System.import('src/foo').then(function(module){
+				alert(module)
+			});
+		}
+	},
 	template
 });

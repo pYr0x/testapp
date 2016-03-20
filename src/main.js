@@ -1,3 +1,4 @@
-import appTemplate from "src/app.stache!";
+import $ from "jquery";
+import appTemplate from "testapp/app.stache!";
 
 $('body').append(appTemplate());
