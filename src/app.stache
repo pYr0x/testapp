@@ -1,0 +1,11 @@
+<can-import from="testapp/components/welcome/" />
+<welcome></welcome>
+
+
+<!--<can-import from="testapp/components/welcome/"></can-import>-->
+<!--<welcome></welcome>-->
+
+
+<!--<can-import from="testapp/components/welcome/">-->
+    <!--<welcome></welcome>-->
+<!--</can-import>-->

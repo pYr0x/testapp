@@ -1,0 +1,40 @@
+{
+  "name": "testapp",
+  "version": "1.0.0",
+  "description": "Sample for demonstrating various aspects of modern cross-platform applications.",
+  "main": "index.js",
+  "repository": {
+    "type": "",
+    "url": ""
+  },
+  "scripts": {},
+  "author": "",
+  "bugs": {
+    "url": ""
+  },
+  "homepage": "",
+  "devDependencies": {
+    "gulp-atom-electron": "^1.4.0",
+    "gulp-awesome-electron": "git+https://github.com/ThorstenHans/gulp-awesome-electron.git",
+    "gulp-symdest": "^1.0.0",
+    "gulp-clean": "^0.3.2",
+    "merge2": "^0.3.6",
+    "require-dir": "^0.3.0",
+    "run-sequence": "^1.1.4"
+  },
+  "dependencies": {
+    "can": "git+https://github.com/canjs/canjs.git",
+    "jquery": "^2.2.2",
+    "steal": "^0.15.1",
+    "steal-tools": "git+https://github.com/stealjs/steal-tools.git#minor"
+  },
+  "system": {
+    "main": "index",
+    "directories": {
+      "lib": "src"
+    },
+    "npmIgnore": [
+      "devDependencies"
+    ]
+  }
+}
