@@ -3,9 +3,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Hallo</title>
+    <script>
+        steal = {
+            instantiated: {
+                "bundles/testapp/main.css!$css" : null
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="dist/bundles/testapp/main.css">
+
 </head>
 <body>
 
-<script src="bundles/testapp/main.js" env="production" main="testapp/main" bundles-path="bundles"></script>
+<script src="dist/bundles/testapp/main.js" env="production" main="testapp/main"></script>
 </body>
 </html>
