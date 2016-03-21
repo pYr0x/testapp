@@ -1,3 +1,4 @@
+import route from 'can/route/';
 import Component from 'can/component/';
 import Map from 'can/map/';
 import 'can/map/define/';
@@ -17,6 +18,7 @@ export default Component.extend({
 	viewModel: ViewModel,
 	events: {
 		'click': function(){
+			route.attr('page', 'next');
 			System.import('src/foo').then(function(module){
 				alert(module)
 			});

@@ -2,12 +2,19 @@
 <welcome></welcome>
 
 
-<!--<can-import from="testapp/components/welcome/"></can-import>-->
-<!--<welcome></welcome>-->
+<p>current page: {{appState.page}}</p>
 
 
-<!--<can-import from="testapp/components/welcome/">-->
-    <!--{{#if isResolved}}-->
-    <!--<wel-come></wel-come>-->
-    <!--{{/if}}-->
-<!--</can-import>-->
+<div>
+{{#routeCurrent(page='home')}}
+    <h1>HOME</h1>
+{{/routeCurrent}}
+
+{{#routeCurrent(page='next')}}
+<can-import from="testapp/components/next/">
+        {{#if isResolved}}
+            <x-next></x-next>
+        {{/if}}
+</can-import>
+{{/routeCurrent}}
+</div>
