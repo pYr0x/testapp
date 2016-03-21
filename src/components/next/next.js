@@ -2,8 +2,8 @@
 import Component from 'can/component/';
 import Map from 'can/map/';
 import 'can/map/define/';
-//import './welcome.less!';
-import template from './next.stache!';
+import './next.less!';
+import template from './next.stache';
 
 export const ViewModel = Map.extend({
 	define: {

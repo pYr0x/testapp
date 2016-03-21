@@ -3,7 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Hallo</title>
-    <!--<script src="node_modules/steal/steal.js" env="window-production" main="testapp/main"></script>-->
+    <script>
+        steal = {
+            instantiated: {
+                "bundles/testapp/main.css!$css" : null
+            }
+        }
+    </script>
+    <link rel="stylesheet" href="dist/bundles/testapp/main.css">
 
 </head>
 <body>

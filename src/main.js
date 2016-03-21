@@ -2,7 +2,8 @@ import $ from "jquery";
 import canMap from 'can/map/'
 import route from 'can/route/';
 //import 'can/route/pushstate/';
-import appTemplate from "testapp/app.stache!";
+import './styles.less';
+import appTemplate from "testapp/app.stache";
 
 
 var AppState = canMap.extend({
