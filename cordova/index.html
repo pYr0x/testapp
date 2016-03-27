@@ -1,26 +1,23 @@
-<!--index -> autorender version-->
-<!--app -> version withour autorender-->
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no"/>
-    <title>Hallo</title>
+    <title>Hallo Android</title>
     <script type="text/javascript">
         var steal = {
             instantiated: {
                 "bundles/testapp/app.css!$css" : null
-//                "bundles/testapp/index.css!$css" : null
             }
         };
     </script>
     <link rel="stylesheet" href="css/bootstrap.css">
-    <!--<link rel="stylesheet" href="dist/bundles/testapp/index.css">-->
     <link rel="stylesheet" href="dist/bundles/testapp/app.css">
 </head>
 <body>
     <div id="app"></div>
+
+    <script src="cordova.js"></script>
     <script src="dist/bundles/testapp/app.js" env="production" main="testapp/app"></script>
-    <!--<script src="dist/bundles/testapp/index.js" env="production" main="testapp/index.stache!done-autorender"></script>-->
 </body>
 </html>

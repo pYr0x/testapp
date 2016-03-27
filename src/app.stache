@@ -1,20 +1,29 @@
 <can-import from="testapp/components/welcome/" />
-<welcome></welcome>
+
+<div class="container-fluid">
+
+    <div class="page-header">
+        {{#routeCurrent(page='home')}}
+            <h1>HOME</h1>
+        {{/routeCurrent}}
+
+        {{#routeCurrent(page='next')}}
+            <can-import from="testapp/components/next/">
+                {{#if isResolved}}
+                    <x-next></x-next>
+                {{/if}}
+            </can-import>
+        {{/routeCurrent}}
+
+        <welcome {^content}="*content" {page}="appState.page"></welcome>
+    </div>
 
 
-<p>current page: {{appState.page}}</p>
+    <p>current page: {{appState.page}}</p>
 
+    <div class="well">
+        {{*content}}
+    </div>
 
-<div>
-{{#routeCurrent(page='home')}}
-    <h1>HOME</h1>
-{{/routeCurrent}}
-
-{{#routeCurrent(page='next')}}
-<can-import from="testapp/components/next/">
-        {{#if isResolved}}
-            <x-next></x-next>
-        {{/if}}
-</can-import>
-{{/routeCurrent}}
+    <small>version: {{appState.version}}</small>
 </div>

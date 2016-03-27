@@ -1,1 +1,6 @@
-{{message}}
+<div class="row">
+    <div class="col-xs-6"><button class="btn btn-default" ($click)="goto('next')">{{next}}</button></div>
+    {{^routeCurrent(page='home')}}
+    <div class="col-xs-6"><a href="{{ routeUrl(page="home") }}" class="btn btn-default">{{home}}</a></div>
+    {{/routeCurrent}}
+</div>

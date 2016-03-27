@@ -1,0 +1,41 @@
+<html>
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+</head>
+<body>
+    <can-import from="css/styles.less!" />
+    <can-import from="css/bootstrap.css!" />
+    <can-import from="testapp/appstate_with_autorender" export-as="viewModel" />
+    <can-import from="testapp/components/welcome/" />
+
+    <div class="container-fluid">
+
+        <div class="page-header">
+        {{#routeCurrent(page='home')}}
+            <h1>HOME</h1>
+        {{/routeCurrent}}
+
+        {{#routeCurrent(page='next')}}
+            <can-import from="testapp/components/next/">
+                {{#if isResolved}}
+                    <x-next></x-next>
+                {{/if}}
+            </can-import>
+        {{/routeCurrent}}
+
+            <welcome {^content}="*content" {page}="page"></welcome>
+        </div>
+
+            <p>current page: {{page}}</p>
+
+            <div class="well">
+                {{*content}}
+            </div>
+
+        <small>version: {{version}}</small>
+    </div>
+
+    <script src="/node_modules/steal/steal.js"></script>
+</body>
+</html>

@@ -6,23 +6,27 @@ import './welcome.less';
 import template from './welcome.stache';
 
 export const ViewModel = Map.extend({
-	define: {
-		message: {
-			value: 'Welcome there!'
+	next: "up to next page",
+	home: "back to home",
+	content: "hello on Home",
+	goto: function(foo){
+		"use strict";
+
+		if(foo === 'next') {
+			// progressive loaded content
+			System.import('testapp/foo').then( (module) => {
+				this.attr('content', module);
+			});
 		}
+
+		route.attr('page', foo);
+		console.log("current page", this.attr('page'));
 	}
 });
 
 export default Component.extend({
 	tag: 'welcome',
 	viewModel: ViewModel,
-	events: {
-		'click': function(){
-			route.attr('page', 'next');
-			System.import('src/foo').then(function(module){
-				alert(module)
-			});
-		}
-	},
+	events: {},
 	template
 });

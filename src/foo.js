@@ -1,1 +1,1 @@
-module.exports = "clicked";
+module.exports = "you clicked on next!";

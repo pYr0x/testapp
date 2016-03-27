@@ -6,15 +6,15 @@
     <script>
         steal = {
             instantiated: {
-                "bundles/testapp/main.css!$css" : null
+                "bundles/testapp/app.css!$css" : null
             }
         }
     </script>
-    <link rel="stylesheet" href="dist/bundles/testapp/main.css">
-
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="dist/bundles/testapp/app.css">
 </head>
 <body>
-
-<script src="dist/bundles/testapp/main.js" env="production" main="testapp/main"></script>
+    <div id="app"></div>
+    <script src="dist/bundles/testapp/app.js" env="production" main="testapp/app"></script>
 </body>
 </html>
