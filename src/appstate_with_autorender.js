@@ -1,23 +1,21 @@
-import "can/map/define/";
-import Map from 'can/map/';
+import { DefineMap } from "can";
+
 import route from "./routes";
 
-const AppState = Map.extend({
-	define: {
-		title: {
-			get: function(){
-				console.log(this.attr('page'));
-				return "hallo welt"
-			}
-		},
-		version: {
-			get: function() {
-				"use strict";
-				return '1.0.0';
-			}
+const AppState = DefineMap.extend("AppState", {
+	page: "string",
+	title: {
+		get: function(){
+			console.log(this.page);
+			return "hallo welt"
 		}
 	},
-	version: '1.0.0'
+	version: {
+		get: function() {
+			"use strict";
+			return '1.0.0';
+		}
+	}
 });
 
 export default AppState;

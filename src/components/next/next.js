@@ -1,21 +1,13 @@
-import Component from 'can/component/';
-import Map from 'can/map/';
-import 'can/map/define/';
+import { Component } from 'can';
 import './next.less!';
-import template from './next.stache';
-
-export const ViewModel = Map.extend({
-	define: {
-		message: {
-			value: 'NEXT!'
-		}
-	}
-});
+import view from './next.stache';
 
 export default Component.extend({
 	tag: 'x-next',
-	viewModel: ViewModel,
-	events: {
+	ViewModel: {
+		message: {
+			default: 'NEXT!'
+		}
 	},
-	template
+	view
 });

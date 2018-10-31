@@ -4,8 +4,8 @@
     <title>{{title}}</title>
 </head>
 <body>
-    <can-import from="css/styles.less!" />
-    <can-import from="css/bootstrap.css!" />
+    <can-import from="css/styles.less" />
+    <can-import from="css/bootstrap.css" />
     <can-import from="testapp/appstate_with_autorender" export-as="viewModel" />
     <can-import from="testapp/components/welcome/" />
 
