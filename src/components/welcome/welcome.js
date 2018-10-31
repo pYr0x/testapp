@@ -1,32 +1,28 @@
-import route from 'can/route/';
-import Component from 'can/component/';
-import Map from 'can/map/';
-import 'can/map/define/';
+import { Component, route, DefineMap } from 'can';
 import './welcome.less';
-import template from './welcome.stache';
+import view from './welcome.stache';
 
-export const ViewModel = Map.extend({
-	next: "up to next page",
-	home: "back to home",
-	content: "hello on Home",
+export const ViewModel = DefineMap.extend({
+	next: { default: "up to next page" },
+	home: { default: "back to home" },
+	content: { default: "hello on Home" },
 	goto: function(foo){
 		"use strict";
 
 		if(foo === 'next') {
 			// progressive loaded content
-			System.import('testapp/foo').then( (module) => {
-				this.attr('content', module);
+			steal.loader.import('testapp/foo').then( (module) => {
+				this.content = module;
 			});
 		}
 
-		route.attr('page', foo);
-		console.log("current page", this.attr('page'));
+		route.data.page = foo;
+		console.log("current page", this.page);
 	}
 });
 
 export default Component.extend({
 	tag: 'welcome',
-	viewModel: ViewModel,
-	events: {},
-	template
+	ViewModel,
+	view
 });

@@ -1,6 +1,6 @@
-import route from 'can/route/';
+import {route} from 'can';
 
-route(':page', { page: 'home' });
+route('{page}', { page: 'home' });
 
 
 export default route;
